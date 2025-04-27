@@ -1,0 +1,25 @@
+<div class="d-flex justify-content-start mb-3 ms-5">
+    <button class="btn amatis-button" (click)="back()">Back</button>
+</div>
+
+<div class="container">
+
+    <div class="mb-4">
+        <h4>Historical Records</h4>
+        <ul class="list-group">
+            <li class="list-group-item" *ngFor="let history of patient!.history">
+                {{ history.date | date:'mediumDate' }} - {{ history.description }}
+            </li>
+        </ul>
+    </div>
+
+    <div class="mb-4">
+        <h4>Doctor Remarks</h4>
+        <textarea class="form-control" rows="4" [value]="patient?.doctorRemarks" readonly></textarea>
+    </div>
+
+    <div class="mb-4">
+        <h4>AI-Supported Prediction</h4>
+        <textarea class="form-control" rows="3" [value]="aiPrediction" readonly></textarea>
+    </div>
+</div>

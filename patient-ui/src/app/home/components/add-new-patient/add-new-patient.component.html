@@ -1,0 +1,22 @@
+<div class="modal-header">
+    <h5 class="modal-title">Add New Patient</h5>
+    <button type="button" class="btn-close" aria-label="Close" (click)="activeModal?.dismiss('Cross click')"></button>
+  </div>
+  <div class="modal-body">
+    <form [formGroup]="addPatientForm" >
+      <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" id="name" class="form-control" formControlName="name">
+      </div>
+      <div class="mb-3">
+        <label for="surname" class="form-label">Surname</label>
+        <input type="text" id="surname" class="form-control" formControlName="surname">
+      </div>
+      <div class="mb-3">
+        <label for="birthdate" class="form-label">Birthdate</label>
+        <input type="date" id="birthdate" class="form-control" formControlName="birthdate">
+      </div>
+      <button type="submit" class="btn amatis-button float-end mb-3" (click)="onSubmit()" [disabled]="addPatientForm.invalid">Save</button>
+    </form>
+  </div>
+  

@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "ihEQMXryxyLBvKDxfVUl+/tAZhzlpMFINV2oZzWhlRY=",
+  "Source": "patient-tracking-api",
+  "BasePath": "_content/patient-tracking-api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="d-flex justify-content-end mb-3">
+        <button class="btn amatis-button" (click)="openAddPatientModal()">Add New Patient</button>
+    </div>
+    
+    <div class="table-responsive">
+      <table class="table table-bordered table-hover">
+        <thead class="table-light">
+          <tr>
+            <th>Name</th>
+            <th>Surname</th>
+            <th>Birthdate</th>
+            <th>View</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let patient of patients">
+            <td>{{ patient.name }}</td>
+            <td>{{ patient.surname }}</td>
+            <td>{{ patient.birthdate | date }}</td>
+            <td class="text-center">
+              <button class="btn btn-sm btn-primary me-2" (click)="viewPatient(patient.id)">
+                <img style="width: 20px;" src="../../../../assets/icons/laptop-medical-solid.svg" alt="">
+              </button>
+            </td>
+            <td class="text-center">
+                <button class="btn btn-sm btn-danger" (click)="deletePatient(patient.id)">
+                    <img  style="width: 15px;" src="../../../../assets/icons/trash-solid.svg" alt="">
+                </button>
+              </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
